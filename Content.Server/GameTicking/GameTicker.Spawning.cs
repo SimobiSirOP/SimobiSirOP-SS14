@@ -199,6 +199,20 @@ namespace Content.Server.GameTicking
 
             _mind.TransferTo(newMind, mob);
 
+            var random = IoCManager.Resolve<IRobustRandom>();
+            var randomAllowedSpecies = random.Pick(jobPrototype.AllowedSpecies);
+            {
+                if (_cfg.GetCVar(CCVars.ICAllowedSpecies))
+                {
+                    if (!jobPrototype.AllowedSpecies.Contains(character.Species))
+                    {
+
+                        HumanoidCharacterProfile.RandomWithSpecies(randomAllowedSpecies);
+                        _chatManager.DispatchServerMessage(player, Loc.GetString("gameticking-allowed-species-random-generated"));
+                    }
+                }
+            }
+
             if (lateJoin && !silent)
             {
                 _chatSystem.DispatchStationAnnouncement(station,

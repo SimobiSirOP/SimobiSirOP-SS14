@@ -25,6 +25,8 @@
   canBeAntag: false
   accessGroups:
   - AllAccess
+  allowedSpecies:
+  - Human
 
 - type: startingGear
   id: CaptainGear

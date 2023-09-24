@@ -1489,6 +1489,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> ICShowSSDIndicator =
             CVarDef.Create("ic.show_ssd_indicator", true, CVar.CLIENTONLY);
 
+        public static readonly CVarDef<bool> ICAllowedSpecies = CVarDef.Create("ic.allowed_species_system", true, CVar.SERVER);
+
         /*
          * Salvage
          */
