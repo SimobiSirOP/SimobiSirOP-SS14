@@ -29,6 +29,7 @@ game-ticker-player-no-jobs-available-when-joining = When attempting to join to t
 # Displayed in chat to admins when a player joins
 player-join-message = Player {$name} joined.
 player-first-join-message = Player {$name} joined for the first time.
+player-species-random-generated = You tried to join the ({$job}) with disallowed species selected, your appearance has been randomized
 
 # Displayed in chat to admins when a player leaves
 player-leave-message = Player {$name} left.

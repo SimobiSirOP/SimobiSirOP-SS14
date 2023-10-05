@@ -208,7 +208,7 @@ namespace Content.Server.GameTicking
                     {
 
                         HumanoidCharacterProfile.RandomWithSpecies(randomAllowedSpecies);
-                        _chatManager.DispatchServerMessage(player, Loc.GetString("gameticking-allowed-species-random-generated"));
+                        _chatManager.DispatchServerMessage(player, Loc.GetString("player-species-random-generated"));
                     }
                 }
             }

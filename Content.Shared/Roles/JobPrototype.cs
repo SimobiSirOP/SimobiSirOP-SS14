@@ -88,8 +88,8 @@ namespace Content.Shared.Roles
         [DataField("special", serverOnly: true)]
         public JobSpecial[] Special { get; private set; } = Array.Empty<JobSpecial>();
 
-        [DataField("allowedSpecies", customTypeSerializer: typeof(PrototypeIdSerializer<SpeciesPrototype>))]
-        public string[] AllowedSpecies { get; private set; } = Array.Empty<string>();
+        [DataField("allowedSpecies", customTypeSerializer: typeof(PrototypeIdListSerializer<SpeciesPrototype>))]
+        public IReadOnlyCollection<string> AllowedSpecies { get; } = Array.Empty<string>();
 
         [DataField("access", customTypeSerializer: typeof(PrototypeIdListSerializer<AccessLevelPrototype>))]
         public IReadOnlyCollection<string> Access { get; private set; } = Array.Empty<string>();

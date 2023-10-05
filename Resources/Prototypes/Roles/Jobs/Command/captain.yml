@@ -23,10 +23,10 @@
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
   canBeAntag: false
-  accessGroups:
-  - AllAccess
   allowedSpecies:
   - Human
+  accessGroups:
+  - AllAccess
 
 - type: startingGear
   id: CaptainGear
